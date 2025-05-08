@@ -1,0 +1,32 @@
+title: Holosystolic murmur object
+description: >
+  Describes ...
+subschema: ./schema/objects/holosystolic-murmur.schema.json
+
+type: object
+
+required: 
+  - type
+
+properties:
+  
+  "type":
+    title: Type
+    description: Type of murmur Should be "Holosystolic murmur"  
+    type: string
+    const: Holosystolic murmur
+  
+  "grade":
+    title: Grade
+    description: Grade ...
+    oneOf:
+      - $ref: "../values/murmur-grade" 
+
+  "Unstable":
+    title: Unstable
+    description: Indicates ...  
+    type: boolean
+
+
+additionalProperties: true  
+  

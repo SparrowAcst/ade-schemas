@@ -1,0 +1,16 @@
+
+title: Label "Systolic murmurs"
+description: Label "Systolic murmurs"
+subschema: ./schema/labels/systolic-murmurs.schema.json      
+type: array
+items:
+  oneOf:
+    - $ref: "../objects/no-systolic-murmurs"
+    - $ref: "../objects/systolic-murmur-undetermined"
+    - $ref: "../objects/ejection-type-murmur"
+    - $ref: "../objects/midsystolic-murmur"
+    - $ref: "../objects/holosystolic-murmur"
+    - $ref: "../objects/late-systolic-murmur"
+
+uniqueItems: true
+minItems: 0

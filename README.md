@@ -1,1 +1,1 @@
-# ade-schemas
+# ADE Data Types. JSON-Schema repo

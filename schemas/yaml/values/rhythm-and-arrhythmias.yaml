@@ -1,0 +1,31 @@
+
+title: Rhythm and arrhythmias values
+description: Available values for Rhythm and Arrhythmias
+subschema: ./schema/values/rhythm-and-arrhythmias.schema.json        
+
+oneOf:
+   
+   - title: No arrhythmia
+     description: This value is used in case of ...
+     type: string
+     const: No arrhythmia
+   
+   - title: Premature beats
+     description: This value is used in case of ...
+     type: string
+     const: Premature beats
+   
+   - title: Atrial fibrillation
+     description: This value is used in case of ...
+     type: string
+     const: Atrial fibrillation
+   
+   - title: Other arrhythmia
+     description: This value is used in case of ...
+     type: string
+     const: Other arrhythmia
+
+   - title: Undefined Rhythm
+     description: This value is used in case of ...
+     type: string
+     const: Undefined Rhythm

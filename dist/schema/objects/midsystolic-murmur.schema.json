@@ -1,0 +1,52 @@
+{
+ "type": "object",
+ "required": [
+  "type"
+ ],
+ "properties": {
+  "type": {
+   "type": "string",
+   "const": "Midsystolic murmur"
+  },
+  "grade": {
+   "oneOf": [
+    {
+     "oneOf": [
+      {
+       "type": "string",
+       "const": "1"
+      },
+      {
+       "type": "string",
+       "const": "2"
+      },
+      {
+       "type": "string",
+       "const": "3"
+      },
+      {
+       "type": "string",
+       "const": "No grade"
+      }
+     ]
+    }
+   ]
+  },
+  "Certain non-significant": {
+   "type": "boolean"
+  },
+  "Probable non-significant": {
+   "type": "boolean"
+  },
+  "Undetermined significance": {
+   "type": "boolean"
+  },
+  "Still's Murmur": {
+   "type": "boolean"
+  },
+  "Unstable": {
+   "type": "boolean"
+  }
+ },
+ "additionalProperties": true
+}

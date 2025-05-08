@@ -1,0 +1,19 @@
+title: No Systolic Murmurs object
+description: >
+  Describes ...
+subschema: ./schema/objects/no-systolic-murmurs.schema.json
+
+type: object
+
+required: 
+  - type
+
+properties:
+  "type":
+    title: Type
+    description: Type of murmur. Should be "No systolic murmurs"  
+    type: string
+    const: No systolic murmurs
+
+additionalProperties: true  
+  

@@ -1,0 +1,38 @@
+{
+ "type": "object",
+ "properties": {
+  "metadata": {
+   "oneOf": [
+    {
+     "type": "null"
+    },
+    {
+     "type": "object",
+     "properties": {
+      "continent_code": {
+       "type": "string"
+      },
+      "country_a2": {
+       "type": "string"
+      },
+      "country_a3": {
+       "type": "string"
+      },
+      "region_code": {
+       "type": "string"
+      },
+      "state_code": {
+       "type": "string"
+      }
+     }
+    }
+   ]
+  },
+  "country": {
+   "type": "string"
+  },
+  "city": {
+   "type": "string"
+  }
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "type": "array",
+ "items": {
+  "oneOf": [
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "No systolic murmurs"
+     }
+    },
+    "additionalProperties": true
+   },
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "Systolic murmur undetermined"
+     },
+     "Grade": {
+      "oneOf": [
+       {
+        "oneOf": [
+         {
+          "type": "string",
+          "const": "1"
+         },
+         {
+          "type": "string",
+          "const": "2"
+         },
+         {
+          "type": "string",
+          "const": "3"
+         },
+         {
+          "type": "string",
+          "const": "No grade"
+         }
+        ]
+       }
+      ]
+     },
+     "Unstable": {
+      "type": "boolean"
+     }
+    },
+    "additionalProperties": true
+   },
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "Ejection Type Murmur"
+     },
+     "grade": {
+      "oneOf": [
+       {
+        "oneOf": [
+         {
+          "type": "string",
+          "const": "1"
+         },
+         {
+          "type": "string",
+          "const": "2"
+         },
+         {
+          "type": "string",
+          "const": "3"
+         },
+         {
+          "type": "string",
+          "const": "No grade"
+         }
+        ]
+       }
+      ]
+     },
+     "Certain non-significant": {
+      "type": "boolean"
+     },
+     "Probable non-significant": {
+      "type": "boolean"
+     },
+     "Undetermined significance": {
+      "type": "boolean"
+     },
+     "Still's Murmur": {
+      "type": "boolean"
+     },
+     "Unstable": {
+      "type": "boolean"
+     }
+    }
+   },
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "Midsystolic murmur"
+     },
+     "grade": {
+      "oneOf": [
+       {
+        "oneOf": [
+         {
+          "type": "string",
+          "const": "1"
+         },
+         {
+          "type": "string",
+          "const": "2"
+         },
+         {
+          "type": "string",
+          "const": "3"
+         },
+         {
+          "type": "string",
+          "const": "No grade"
+         }
+        ]
+       }
+      ]
+     },
+     "Certain non-significant": {
+      "type": "boolean"
+     },
+     "Probable non-significant": {
+      "type": "boolean"
+     },
+     "Undetermined significance": {
+      "type": "boolean"
+     },
+     "Still's Murmur": {
+      "type": "boolean"
+     },
+     "Unstable": {
+      "type": "boolean"
+     }
+    },
+    "additionalProperties": true
+   },
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "Holosystolic murmur"
+     },
+     "grade": {
+      "oneOf": [
+       {
+        "oneOf": [
+         {
+          "type": "string",
+          "const": "1"
+         },
+         {
+          "type": "string",
+          "const": "2"
+         },
+         {
+          "type": "string",
+          "const": "3"
+         },
+         {
+          "type": "string",
+          "const": "No grade"
+         }
+        ]
+       }
+      ]
+     },
+     "Unstable": {
+      "type": "boolean"
+     }
+    },
+    "additionalProperties": true
+   },
+   {
+    "type": "object",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "const": "Late Systolic Murmur"
+     },
+     "Grade": {
+      "oneOf": [
+       {
+        "oneOf": [
+         {
+          "type": "string",
+          "const": "1"
+         },
+         {
+          "type": "string",
+          "const": "2"
+         },
+         {
+          "type": "string",
+          "const": "3"
+         },
+         {
+          "type": "string",
+          "const": "No grade"
+         }
+        ]
+       }
+      ]
+     },
+     "Unstable": {
+      "type": "boolean"
+     }
+    },
+    "additionalProperties": true
+   }
+  ]
+ },
+ "uniqueItems": true,
+ "minItems": 0
+}

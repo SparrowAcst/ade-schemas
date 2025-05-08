@@ -1,0 +1,38 @@
+title: Device description object
+description: >
+  Describes ...
+subschema: ./schema/objects/device-description.schema.json
+
+type: object
+
+properties:
+  
+  "id":
+    title: id 
+    description: Unique Device Identifier
+    type: string
+    format: uuid
+  
+  "model":  
+    title: model
+    description: Device Model Name
+    type: string
+  
+  "osVersion": 
+    title: osVersion 
+    description: Version of device OS  
+    type: string
+
+  "stethophoneVersion":
+    title: stethophoneVersion 
+    description: Version of installed Stethophone mobile application
+    type: string    
+
+  "appStoreRegion":
+    title: appStoreRegion 
+    description: Country of App Store location
+    type: string    
+
+
+additionalProperties: true  
+  

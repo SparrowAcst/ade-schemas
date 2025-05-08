@@ -1,0 +1,31 @@
+title: Systolic murmur undetermined object
+description: >
+  Describes ...
+subschema: ./schema/objects/systolic-murmur-undetermined.schema.json
+
+type: object
+
+required: 
+  - type
+
+properties:
+  
+  "type":
+    title: Type
+    description: Type of murmur Should be "Systolic murmur undetermined"  
+    type: string
+    const: Systolic murmur undetermined
+  
+  "Grade":
+    title: Grade
+    description: Grade ...
+    oneOf:
+      - $ref: "../values/murmur-grade" 
+
+  "Unstable":
+    title: Unstable
+    description: Indicates ...  
+    type: boolean
+
+additionalProperties: true  
+  

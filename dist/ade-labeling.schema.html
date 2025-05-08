@@ -1,0 +1,895 @@
+
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link rel="stylesheet" href="github-markdown.css">
+            <style>
+                .markdown-body {
+                    box-sizing: border-box;
+                    min-width: 200px;
+                    max-width: 980px;
+                    margin: 0 auto;
+                    padding: 45px;
+                }
+
+                @media (max-width: 767px) {
+                    .markdown-body {
+                        padding: 15px;
+                    }
+                }
+                .value {
+                    font-weight: bold;
+                    font-size: 85%;
+                    border-radius: 4px;
+                    padding: 0px 6px 2px;
+                    margin-right: 5px;
+                    background: #F5F5F5;
+                    border: 2px solid #BCAAA4;
+                }
+
+                .markdown-body code, .markdown-body tt {
+                    background-color: transparent !important;
+                }
+            </style>
+        	<article class="markdown-body">
+        		<h1><a name="schemaadelabelingschemajson"></a>ADE Labeling Data Type</h1>
+<p><strong>Schema: <a href="./schema/ade-labeling.schema.json" rel="nofollow">./schema/ade-labeling.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>JSON schema for ADE data labeling. This data is stored in a &quot;labels&quot; collection in each database that is associated with ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(10)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><code>string</code></td>
+<td>A unique identifier for a data instance associated with a labels, wav-file, spectrogram data, etc. We use the Globally Uniform Identifier (GUID) version 4.<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>geolocation</strong></td>
+<td><code>object</code></td>
+<td>Reference: <a href="#schemalabelsgeolocationschemajson" rel="nofollow">Label &quot;geoLocation&quot;</a></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>deviceDescription</strong></td>
+<td><code>object</code></td>
+<td>Reference: <a href="#schemaobjectsdevicedescriptionschemajson" rel="nofollow">Device description object</a></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Heart Sound Informativeness</strong></td>
+<td></td>
+<td>Indicates the sound information content of heart sounds.<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Lung Sound Informativeness</strong></td>
+<td></td>
+<td>Indicates the sound information content of lungs sounds.<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>S3</strong></td>
+<td></td>
+<td>Indicates the S3 segments availability in the heart sound.<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>S4</strong></td>
+<td></td>
+<td>Indicates the S4 segments availability in the heart sound.<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Pathological findings</strong></td>
+<td><code>array</code></td>
+<td>Reference: <a href="#schemalabelspathologicalfindingsschemajson" rel="nofollow">Label &quot;Pathological findings&quot;</a></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Rhythm and Arrhythmias</strong></td>
+<td></td>
+<td>Indicates the type of Rhythm and Arrhythmias in the heart sound.<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Systolic murmurs</strong></td>
+<td><code>array</code></td>
+<td>Reference: <a href="#schemalabelssystolicmurmursschemajson" rel="nofollow">Label &quot;Systolic murmurs&quot;</a></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>id</h2>
+<p><strong>Description</strong>:
+A unique identifier for a data instance associated with a labels, wav-file, spectrogram data, etc. We use the Globally Uniform Identifier (GUID) version 4.</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Format:</strong> <code>&quot;uuid&quot;</code><br/></p>
+<h2>geolocation</h2>
+<p><strong>Description</strong>:
+Label &quot;geoLocation&quot;</p>
+<p>Reference <a href="#schemalabelsgeolocationschemajson" rel="nofollow">Label &quot;geoLocation&quot;</a></p>
+<h2>deviceDescription</h2>
+<p><strong>Description</strong>:
+Describes ...</p>
+<p>Reference <a href="#schemaobjectsdevicedescriptionschemajson" rel="nofollow">Device description object</a></p>
+<h2>Heart Sound Informativeness</h2>
+<p><strong>Description</strong>:
+Indicates the sound information content of heart sounds.</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesinformativenessschemajson" rel="nofollow">Recording informativeness values</a></li>
+</ul>
+<h2>Lung Sound Informativeness</h2>
+<p><strong>Description</strong>:
+Indicates the sound information content of lungs sounds.</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesinformativenessschemajson" rel="nofollow">Recording informativeness values</a></li>
+</ul>
+<h2>S3</h2>
+<p><strong>Description</strong>:
+Indicates the S3 segments availability in the heart sound.</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluessegmentsavailabilityschemajson" rel="nofollow">Segments availability values</a></li>
+</ul>
+<h2>S4</h2>
+<p><strong>Description</strong>:
+Indicates the S4 segments availability in the heart sound.</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluessegmentsavailabilityschemajson" rel="nofollow">Segments availability values</a></li>
+</ul>
+<h2>Pathological findings[]</h2>
+<p><strong>Description</strong>:
+Label &quot;Pathological findings&quot;</p>
+<p>Reference <a href="#schemalabelspathologicalfindingsschemajson" rel="nofollow">Label &quot;Pathological findings&quot;</a></p>
+<h2>Rhythm and Arrhythmias</h2>
+<p><strong>Description</strong>:
+Indicates the type of Rhythm and Arrhythmias in the heart sound.</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesrhythmandarrhythmiasschemajson" rel="nofollow">Rhythm and arrhythmias values</a></li>
+</ul>
+<h2>Systolic murmurs[]</h2>
+<p><strong>Description</strong>:
+Label &quot;Systolic murmurs&quot;</p>
+<p>Reference <a href="#schemalabelssystolicmurmursschemajson" rel="nofollow">Label &quot;Systolic murmurs&quot;</a></p>
+<h1><a name="schemalabelsgeolocationschemajson"></a>Label &quot;geoLocation&quot;</h1>
+<p><strong>Schema: <a href="./schema/labels/geo-location.schema.json" rel="nofollow">./schema/labels/geo-location.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Label &quot;geoLocation&quot;</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Properties</strong>(3)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>metadata</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>country</strong></td>
+<td><code>string</code></td>
+<td>Decoded country name<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>city</strong></td>
+<td><code>string</code></td>
+<td>Decoded city name<br/></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>metadata</h2>
+<p><strong>Description</strong>:</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><strong>Type:</strong> <code>null</code><br/></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectsgeolocationmetadataschemajson" rel="nofollow">Geolocation metadata object</a></p>
+</li>
+</ul>
+<h2>country</h2>
+<p><strong>Description</strong>:
+Decoded country name</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>city</h2>
+<p><strong>Description</strong>:
+Decoded city name</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h1><a name="schemaobjectsgeolocationmetadataschemajson"></a>Geolocation metadata object</h1>
+<p><strong>Schema: <a href="./schema/objects/geo-location-metadata.schema.json" rel="nofollow">./schema/objects/geo-location-metadata.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Parsed geolocation metadata</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Properties</strong>(5)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>continent_code</strong></td>
+<td><code>string</code></td>
+<td>Continent Code<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>country_a2</strong></td>
+<td><code>string</code></td>
+<td>Country Code (Alpha 2)<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>country_a3</strong></td>
+<td><code>string</code></td>
+<td>Country Code (Alpha 3)<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>region_code</strong></td>
+<td><code>string</code></td>
+<td>Region Code<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>state_code</strong></td>
+<td><code>string</code></td>
+<td>State Code<br/></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>continent_code</h2>
+<p><strong>Description</strong>:
+Continent Code</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>country_a2</h2>
+<p><strong>Description</strong>:
+Country Code (Alpha 2)</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>country_a3</h2>
+<p><strong>Description</strong>:
+Country Code (Alpha 3)</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>region_code</h2>
+<p><strong>Description</strong>:
+Region Code</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>state_code</h2>
+<p><strong>Description</strong>:
+State Code</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h1><a name="schemaobjectsdevicedescriptionschemajson"></a>Device description object</h1>
+<p><strong>Schema: <a href="./schema/objects/device-description.schema.json" rel="nofollow">./schema/objects/device-description.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(5)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><code>string</code></td>
+<td>Unique Device Identifier<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td><code>string</code></td>
+<td>Device Model Name<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>osVersion</strong></td>
+<td><code>string</code></td>
+<td>Version of device OS<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>stethophoneVersion</strong></td>
+<td><code>string</code></td>
+<td>Version of installed Stethophone mobile application<br/></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>appStoreRegion</strong></td>
+<td><code>string</code></td>
+<td>Country of App Store location<br/></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>id</h2>
+<p><strong>Description</strong>:
+Unique Device Identifier</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Format:</strong> <code>&quot;uuid&quot;</code><br/></p>
+<h2>model</h2>
+<p><strong>Description</strong>:
+Device Model Name</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>osVersion</h2>
+<p><strong>Description</strong>:
+Version of device OS</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>stethophoneVersion</h2>
+<p><strong>Description</strong>:
+Version of installed Stethophone mobile application</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h2>appStoreRegion</h2>
+<p><strong>Description</strong>:
+Country of App Store location</p>
+<p><strong>Type:</strong> <code>string</code><br/></p>
+<h1><a name="schemavaluesinformativenessschemajson"></a>Recording informativeness values</h1>
+<p><strong>Schema: <a href="./schema/values/informativeness.schema.json" rel="nofollow">./schema/values/informativeness.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Available values for Recording Informativeness</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><span class="value">Good</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Good&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Poor</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/></p>
+</li>
+<li>
+<p><span class="value">Uninformative</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Uninformative&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Non assessed</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Non assessed&quot;</code><br/></p>
+</li>
+</ul>
+<h1><a name="schemavaluessegmentsavailabilityschemajson"></a>Segments availability values</h1>
+<p><strong>Schema: <a href="./schema/values/segments-availability.schema.json" rel="nofollow">./schema/values/segments-availability.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Available values for segments availability such as S3 or S4</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><span class="value">Certain</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Certain&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Probable</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Probable&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">No</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;No&quot;</code><br/></p>
+</li>
+</ul>
+<h1><a name="schemalabelspathologicalfindingsschemajson"></a>Label &quot;Pathological findings&quot;</h1>
+<p><strong>Schema: <a href="./schema/labels/pathological-findings.schema.json" rel="nofollow">./schema/labels/pathological-findings.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Label &quot;Pathological findings&quot;</p>
+<p><strong>Type:</strong> array<br/>
+<strong>Items:</strong> Reference: <a href="#schemavaluespathologicalfindingsschemajson" rel="nofollow">Pathological findings values</a><br/><strong>Minimum Items:</strong> 0<br/>
+<strong>Unique Items:</strong> yes<br/></p>
+<h1><a name="schemavaluespathologicalfindingsschemajson"></a>Pathological findings values</h1>
+<p><strong>Schema: <a href="./schema/values/pathological-findings.schema.json" rel="nofollow">./schema/values/pathological-findings.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Available values for label &quot;Pathological findings&quot;</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><span class="value">No Patalogy</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;No Pathology&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Ejection Sound</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Ejection Sound&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Additional Systolic Tones</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Additional Systolic Tones&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Summation gallop</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Summation gallop&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Additional Diastolic Tones</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Additional Diastolic Tones&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Pericardial Knock</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Pericardial Knock&quot;</code><br/></p>
+</li>
+</ul>
+<h1><a name="schemavaluesrhythmandarrhythmiasschemajson"></a>Rhythm and arrhythmias values</h1>
+<p><strong>Schema: <a href="./schema/values/rhythm-and-arrhythmias.schema.json" rel="nofollow">./schema/values/rhythm-and-arrhythmias.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Available values for Rhythm and Arrhythmias</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><span class="value">No arrhythmia</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;No arrhythmia&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Premature beats</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Premature beats&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Atrial fibrillation</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Atrial fibrillation&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Other arrhythmia</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Other arrhythmia&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">Undefined Rhythm</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Undefined Rhythm&quot;</code><br/></p>
+</li>
+</ul>
+<h1><a name="schemalabelssystolicmurmursschemajson"></a>Label &quot;Systolic murmurs&quot;</h1>
+<p><strong>Schema: <a href="./schema/labels/systolic-murmurs.schema.json" rel="nofollow">./schema/labels/systolic-murmurs.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Label &quot;Systolic murmurs&quot;</p>
+<p><strong>Type:</strong> array<br/>
+<strong>Items:</strong></p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p>Reference <a href="#schemaobjectsnosystolicmurmursschemajson" rel="nofollow">No Systolic Murmurs object</a></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectssystolicmurmurundeterminedschemajson" rel="nofollow">Systolic murmur undetermined object</a></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectsejectiontypemurmurschemajson" rel="nofollow">Ejection type murmur object</a></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectsmidsystolicmurmurschemajson" rel="nofollow">Midsystolic murmur object</a></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectsholosystolicmurmurschemajson" rel="nofollow">Holosystolic murmur object</a></p>
+</li>
+<li>
+<p>Reference <a href="#schemaobjectslatesystolicmurmurschemajson" rel="nofollow">Late Systolic Murmur object</a></p>
+</li>
+</ul>
+<p><strong>Minimum Items:</strong> 0<br/>
+<strong>Unique Items:</strong> yes<br/></p>
+<h1><a name="schemaobjectsnosystolicmurmursschemajson"></a>No Systolic Murmurs object</h1>
+<p><strong>Schema: <a href="./schema/objects/no-systolic-murmurs.schema.json" rel="nofollow">./schema/objects/no-systolic-murmurs.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(1)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur. Should be &quot;No systolic murmurs&quot;<br/></td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur. Should be &quot;No systolic murmurs&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;No systolic murmurs&quot;</code><br/></p>
+<h1><a name="schemaobjectssystolicmurmurundeterminedschemajson"></a>Systolic murmur undetermined object</h1>
+<p><strong>Schema: <a href="./schema/objects/systolic-murmur-undetermined.schema.json" rel="nofollow">./schema/objects/systolic-murmur-undetermined.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(3)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur Should be &quot;Systolic murmur undetermined&quot;<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>Grade</strong></td>
+<td></td>
+<td>Grade ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Unstable</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur Should be &quot;Systolic murmur undetermined&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Systolic murmur undetermined&quot;</code><br/></p>
+<h2>Grade</h2>
+<p><strong>Description</strong>:
+Grade ...</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesmurmurgradeschemajson" rel="nofollow">Murmur grade values</a></li>
+</ul>
+<h2>Unstable</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h1><a name="schemavaluesmurmurgradeschemajson"></a>Murmur grade values</h1>
+<p><strong>Schema: <a href="./schema/values/murmur-grade.schema.json" rel="nofollow">./schema/values/murmur-grade.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Available values for grade of murmurs</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>
+<p><span class="value">1</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;1&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">2</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;2&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">3</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;3&quot;</code><br/></p>
+</li>
+<li>
+<p><span class="value">No grade</span><span>This value is used in case of ...</span><br/><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;No grade&quot;</code><br/></p>
+</li>
+</ul>
+<h1><a name="schemaobjectsejectiontypemurmurschemajson"></a>Ejection type murmur object</h1>
+<p><strong>Schema: <a href="./schema/objects/ejection-type-murmur.schema.json" rel="nofollow">./schema/objects/ejection-type-murmur.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Properties</strong>(7)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur Should be &quot;Ejection Type Murmur&quot;<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>grade</strong></td>
+<td></td>
+<td>Grade ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Certain non-significant</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Probable non-significant</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Undetermined significance</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Still's Murmur</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Unstable</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur Should be &quot;Ejection Type Murmur&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Ejection Type Murmur&quot;</code><br/></p>
+<h2>grade</h2>
+<p><strong>Description</strong>:
+Grade ...</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesmurmurgradeschemajson" rel="nofollow">Murmur grade values</a></li>
+</ul>
+<h2>Certain non-significant</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Probable non-significant</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Undetermined significance</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Still's Murmur</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Unstable</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h1><a name="schemaobjectsmidsystolicmurmurschemajson"></a>Midsystolic murmur object</h1>
+<p><strong>Schema: <a href="./schema/objects/midsystolic-murmur.schema.json" rel="nofollow">./schema/objects/midsystolic-murmur.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(7)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur Should be &quot;Midsystolic murmur&quot;<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>grade</strong></td>
+<td></td>
+<td>Grade ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Certain non-significant</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Probable non-significant</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Undetermined significance</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Still's Murmur</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Unstable</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur Should be &quot;Midsystolic murmur&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Midsystolic murmur&quot;</code><br/></p>
+<h2>grade</h2>
+<p><strong>Description</strong>:
+Grade ...</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesmurmurgradeschemajson" rel="nofollow">Murmur grade values</a></li>
+</ul>
+<h2>Certain non-significant</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Probable non-significant</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Undetermined significance</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Still's Murmur</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h2>Unstable</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h1><a name="schemaobjectsholosystolicmurmurschemajson"></a>Holosystolic murmur object</h1>
+<p><strong>Schema: <a href="./schema/objects/holosystolic-murmur.schema.json" rel="nofollow">./schema/objects/holosystolic-murmur.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(3)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur Should be &quot;Holosystolic murmur&quot;<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>grade</strong></td>
+<td></td>
+<td>Grade ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Unstable</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur Should be &quot;Holosystolic murmur&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Holosystolic murmur&quot;</code><br/></p>
+<h2>grade</h2>
+<p><strong>Description</strong>:
+Grade ...</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesmurmurgradeschemajson" rel="nofollow">Murmur grade values</a></li>
+</ul>
+<h2>Unstable</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+<h1><a name="schemaobjectslatesystolicmurmurschemajson"></a>Late Systolic Murmur object</h1>
+<p><strong>Schema: <a href="./schema/objects/late-systolic-murmur.schema.json" rel="nofollow">./schema/objects/late-systolic-murmur.schema.json</a></strong></p>
+<h2>Description</h2>
+<p>Describes ...</p>
+<p><strong>Type:</strong> object<br/>
+<strong>Additional Properties:</strong> allowed<br/>
+<strong>Properties</strong>(3)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>type</strong></td>
+<td><code>string</code></td>
+<td>Type of murmur Should be &quot;Late Systolic Murmur&quot;<br/></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>Grade</strong></td>
+<td></td>
+<td>Grade ...<br/></td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>Unstable</strong></td>
+<td><code>boolean</code></td>
+<td>Indicates ...<br/></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>type</h2>
+<p><strong>Description</strong>:
+Type of murmur Should be &quot;Late Systolic Murmur&quot;</p>
+<p><strong>Type:</strong> <code>string</code><br/>
+<strong>Constant Value:</strong> <code>&quot;Late Systolic Murmur&quot;</code><br/></p>
+<h2>Grade</h2>
+<p><strong>Description</strong>:
+Grade ...</p>
+<p><strong>ONE OF:</strong></p>
+<ul>
+<li>Reference <a href="#schemavaluesmurmurgradeschemajson" rel="nofollow">Murmur grade values</a></li>
+</ul>
+<h2>Unstable</h2>
+<p><strong>Description</strong>:
+Indicates ...</p>
+<p><strong>Type:</strong> <code>boolean</code><br/></p>
+
+        	</article>
+        	

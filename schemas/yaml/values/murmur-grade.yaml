@@ -1,0 +1,29 @@
+
+title: Murmur grade values
+description: Available values for grade of murmurs
+subschema: ./schema/values/murmur-grade.schema.json        
+
+oneOf:
+   
+   - title: "1"
+     description: This value is used in case of ...
+     type: string
+     const: "1"
+   
+   - title: "2"
+     description: This value is used in case of ...
+     type: string
+     const: "2"
+   
+   - title: "3"
+     description: This value is used in case of ...
+     type: string
+     const: "3"
+   
+   - title: "No grade"
+     description: This value is used in case of ...
+     type: string
+     const: No grade
+
+
+ 

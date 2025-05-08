@@ -1,0 +1,18 @@
+[
+    {
+        "expected": true,
+        "schema": "../../dist/schema/values/murmur-grade.schema.json",
+        "data": "1"
+    },
+    {
+        "expected": true,
+        "schema": "../../dist/schema/values/murmur-grade.schema.json",
+        "data": "2"
+    },
+    {
+        "expected": false,
+        "schema": "../../dist/schema/values/murmur-grade.schema.json",
+        "data": "8"
+    }
+
+]

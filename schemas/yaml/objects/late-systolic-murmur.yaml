@@ -1,0 +1,31 @@
+title: Late Systolic Murmur object
+description: >
+  Describes ...
+subschema: ./schema/objects/late-systolic-murmur.schema.json
+
+type: object
+
+required: 
+  - type
+
+properties:
+  
+  "type":
+    title: Type
+    description: Type of murmur Should be "Late Systolic Murmur"  
+    type: string
+    const: Late Systolic Murmur
+  
+  "Grade":
+    title: Grade
+    description: Grade ...
+    oneOf:
+      - $ref: "../values/murmur-grade" 
+
+  "Unstable":
+    title: Unstable
+    description: Indicates ...  
+    type: boolean
+
+additionalProperties: true  
+  

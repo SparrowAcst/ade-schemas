@@ -1,0 +1,20 @@
+title: Segments availability values
+description: Available values for segments availability such as S3 or S4
+subschema: ./schema/values/segments-availability.schema.json        
+
+oneOf:
+   
+   - title: Certain
+     description: This value is used in case of ...
+     type: string
+     const: Certain
+   
+   - title: Probable
+     description: This value is used in case of ...
+     type: string
+     const: Probable
+   
+   - title: "No"
+     description: This value is used in case of ...
+     type: string
+     const: "No"

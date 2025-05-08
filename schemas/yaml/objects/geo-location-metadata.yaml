@@ -1,0 +1,31 @@
+title: Geolocation metadata object
+description: >
+  Parsed geolocation metadata
+subschema: ./schema/objects/geo-location-metadata.schema.json
+type: object
+properties:
+  "continent_code":
+    title: continent_code
+    description: Continent Code
+    type: string
+
+  "country_a2":
+    title: country_a2
+    description: Country Code (Alpha 2)
+    type: string
+
+  "country_a3":  
+    title: country_a3
+    description: Country Code (Alpha 3)
+    type: string
+  
+  "region_code":  
+    title: region_code
+    description: Region Code
+    type: string
+
+  "state_code":           
+    title: state_code
+    description: State Code
+    type: string
+

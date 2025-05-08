@@ -1,0 +1,28 @@
+{
+ "oneOf": [
+  {
+   "type": "string",
+   "const": "No systolic murmurs"
+  },
+  {
+   "type": "string",
+   "const": "Systolic murmur undetermined"
+  },
+  {
+   "type": "string",
+   "const": "Ejection Type Murmur"
+  },
+  {
+   "type": "string",
+   "const": "Holosystolic Murmur"
+  },
+  {
+   "type": "string",
+   "const": "Midsystolic murmur"
+  },
+  {
+   "type": "string",
+   "const": "Late Systolic Murmur"
+  }
+ ]
+}

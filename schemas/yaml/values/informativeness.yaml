@@ -1,0 +1,27 @@
+
+title: Recording informativeness values
+description: Available values for Recording Informativeness
+subschema: ./schema/values/informativeness.schema.json        
+
+oneOf:
+   
+   - title: Good
+     description: This value is used in case of ...
+     type: string
+     const: Good
+   
+   - title: Poor
+     description: This value is used in case of ...
+     type: string
+     consyt: Poor
+   
+   - title: Uninformative
+     description: This value is used in case of ...
+     type: string
+     const: Uninformative
+   
+   - title: Non assessed
+     description: This value is used in case of ...
+     type: string
+     const: Non assessed
+   

@@ -1,0 +1,37 @@
+
+title: Pathological findings values
+description: Available values for label "Pathological findings"
+subschema: ./schema/values/pathological-findings.schema.json        
+
+
+oneOf:
+   
+   - title: No Patalogy
+     description: This value is used in case of ...
+     type: string
+     const: No Pathology
+   
+   - title: Ejection Sound
+     description: This value is used in case of ...
+     type: string
+     const: Ejection Sound
+   
+   - title: Additional Systolic Tones
+     description: This value is used in case of ...
+     type: string
+     const: Additional Systolic Tones
+   
+   - title: Summation gallop
+     description: This value is used in case of ...
+     type: string
+     const: Summation gallop
+   
+   - title: Additional Diastolic Tones
+     description: This value is used in case of ...
+     type: string
+     const: Additional Diastolic Tones
+   
+   - title: Pericardial Knock
+     description: This value is used in case of ...
+     type: string
+     const: Pericardial Knock

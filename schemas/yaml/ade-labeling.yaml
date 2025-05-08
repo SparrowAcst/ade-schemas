@@ -1,0 +1,63 @@
+title: ADE Labeling Data Type 
+description: >
+  JSON schema for ADE data labeling. This data is stored in a "labels" collection in each database that is associated with ...
+subschema: ./schema/ade-labeling.schema.json
+
+type: object
+required:
+  - id
+
+properties:
+  
+  id:
+    title: id
+    description: A unique identifier for a data instance associated with a labels, wav-file, spectrogram data, etc. We use the Globally Uniform Identifier (GUID) version 4. 
+    type: string
+    format: uuid
+
+  geolocation:
+    $ref: "./labels/geo-location"  
+
+  
+  deviceDescription:
+    $ref: "./objects/device-description"  
+  
+  "Heart Sound Informativeness":
+    title: Label "Heart Sound Informativeness"
+    description: Indicates the sound information content of heart sounds.
+    oneOf:
+      - $ref: "./values/informativeness" 
+
+  "Lung Sound Informativeness":
+    title: Label "Lung Sound Informativeness"
+    description: Indicates the sound information content of lungs sounds.
+    oneOf:
+      - $ref: "./values/informativeness" 
+
+  "S3":
+    title: Label "S3"
+    description: Indicates the S3 segments availability in the heart sound.
+    oneOf:
+      - $ref: "./values/segments-availability"
+
+  "S4":
+    title: Label "S4"
+    description: Indicates the S4 segments availability in the heart sound.
+    oneOf:
+      - $ref: "./values/segments-availability"
+  
+  "Pathological findings":
+    $ref: "./labels/pathological-findings"
+
+  "Rhythm and Arrhythmias":
+    title: Label "Rhythm and Arrhythmias"
+    description: Indicates the type of Rhythm and Arrhythmias in the heart sound.
+    oneOf:
+      - $ref: "./values/rhythm-and-arrhythmias"
+  
+  "Systolic murmurs":
+    $ref: "./labels/systolic-murmurs"
+
+ 
+additionalProperties: true  
+  

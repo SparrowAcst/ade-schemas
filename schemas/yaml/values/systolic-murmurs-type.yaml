@@ -1,0 +1,38 @@
+
+title: Systolic murmurs types
+description: Available values for type of systolic murmurs
+subschema: ./schema/values/systolic-murmurs-type.schema.json        
+
+oneOf:
+   
+   - title: No systolic murmurs
+     description: This value is used in case of ...
+     type: string
+     const: No systolic murmurs
+   
+   - title: Systolic murmur undetermined
+     description: This value is used in case of ...
+     type: string
+     const: Systolic murmur undetermined
+   
+   - title: Ejection Type Murmur
+     description: This value is used in case of ...
+     type: string
+     const: Ejection Type Murmur
+   
+   - title: Holosystolic Murmur
+     description: This value is used in case of ...
+     type: string
+     const: Holosystolic Murmur
+
+   - title: Midsystolic murmur
+     description: This value is used in case of ...
+     type: string
+     const: Midsystolic murmur
+
+   - title: Late Systolic Murmur
+     description: This value is used in case of ...
+     type: string
+     const: Late Systolic Murmur
+
+ 

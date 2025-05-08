@@ -1,0 +1,28 @@
+{
+ "oneOf": [
+  {
+   "type": "string",
+   "const": "No Pathology"
+  },
+  {
+   "type": "string",
+   "const": "Ejection Sound"
+  },
+  {
+   "type": "string",
+   "const": "Additional Systolic Tones"
+  },
+  {
+   "type": "string",
+   "const": "Summation gallop"
+  },
+  {
+   "type": "string",
+   "const": "Additional Diastolic Tones"
+  },
+  {
+   "type": "string",
+   "const": "Pericardial Knock"
+  }
+ ]
+}

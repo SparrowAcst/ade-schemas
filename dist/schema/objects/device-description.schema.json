@@ -1,0 +1,22 @@
+{
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "format": "uuid"
+  },
+  "model": {
+   "type": "string"
+  },
+  "osVersion": {
+   "type": "string"
+  },
+  "stethophoneVersion": {
+   "type": "string"
+  },
+  "appStoreRegion": {
+   "type": "string"
+  }
+ },
+ "additionalProperties": true
+}

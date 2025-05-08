@@ -1,0 +1,56 @@
+title: Ejection type murmur object
+description: >
+  Describes ...
+subschema: ./schema/objects/ejection-type-murmur.schema.json
+
+type: object
+
+required: 
+  - type
+
+properties:
+  
+  "type":
+    title: Type
+    description: Type of murmur Should be "Ejection Type Murmur"  
+    type: string
+    const: Ejection Type Murmur
+  
+  "grade":
+    title: Grade
+    description: Grade ...
+    oneOf:
+      - $ref: "../values/murmur-grade" 
+
+  "Certain non-significant":
+    title: Certain non-significant
+    description: Indicates ...  
+    type: boolean
+
+  "Probable non-significant":
+    title: Probable non-significant
+    description: Indicates ...  
+    type: boolean
+
+  "Undetermined significance":
+    title: Undetermined significance
+    description: Indicates ...  
+    type: boolean
+
+  "Still's Murmur":
+    title: Still's Murmur
+    description: Indicates ...  
+    type: boolean
+
+  "Unstable":
+    title: Unstable
+    description: Indicates ...  
+    type: boolean
+
+
+
+
+
+
+# additionalProperties: true  
+  

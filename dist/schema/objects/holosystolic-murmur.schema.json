@@ -1,0 +1,40 @@
+{
+ "type": "object",
+ "required": [
+  "type"
+ ],
+ "properties": {
+  "type": {
+   "type": "string",
+   "const": "Holosystolic murmur"
+  },
+  "grade": {
+   "oneOf": [
+    {
+     "oneOf": [
+      {
+       "type": "string",
+       "const": "1"
+      },
+      {
+       "type": "string",
+       "const": "2"
+      },
+      {
+       "type": "string",
+       "const": "3"
+      },
+      {
+       "type": "string",
+       "const": "No grade"
+      }
+     ]
+    }
+   ]
+  },
+  "Unstable": {
+   "type": "boolean"
+  }
+ },
+ "additionalProperties": true
+}

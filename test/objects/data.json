@@ -1,0 +1,121 @@
+[
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/ejection-type-murmur.schema.json",
+        "data":
+        {
+            "type": "Ejection Type Murmur",
+            "grade": "2"
+        }
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/ejection-type-murmur.schema.json",
+        "data":
+        {
+            "type": "Ejection Type Murmur",
+            "grade": "3"
+        }
+    },
+
+    {
+        "expected": false,
+        "schema": "../../dist/schema/objects/ejection-type-murmur.schema.json",
+        "data":
+        {
+            "type": "Ejection Type Murmur",
+            "grade": "8",
+            "Probable non-significant": true
+        }
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/device-description.schema.json",
+        "data":
+        {
+            "id": "2449AE38-17E6-48A4-A1BD-9BE9A8A3B1A8",
+            "model": "iPhone 16 Pro Max",
+            "osVersion": "18.4.1",
+            "stethophoneVersion": "3.4.0(10070)",
+            "appStoreRegion": "Ukraine"
+        }
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/device-description.schema.json",
+        "data":
+        {
+            "id": "92C0170B-1F87-41D0-AD02-D3D8870EA737",
+            "model": "iPhone 16 Pro Max",
+            "osVersion": "18.1",
+            "stethophoneVersion": "3.4.0(10070)",
+            "appStoreRegion": "Ukraine"
+        }
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/device-description.schema.json",
+        "data":
+        {
+            "id": "26844683-2C8E-4808-925C-52DCBA62885B",
+            "model": "iPhone 14 Pro",
+            "osVersion": "18.4.1",
+            "stethophoneVersion": "3.4.0(10070)",
+            "appStoreRegion": "Ukraine"
+        }
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/geo-location-metadata.schema.json",
+        "data":
+        {
+            "metadata": null,
+            "country": "unknown",
+            "city": "unknown"
+        }
+
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/geo-location-metadata.schema.json",
+        "data":
+        {
+            "metadata":
+            {
+                "continent_code": "EU",
+                "country_a2": "UA",
+                "country_a3": "UKR",
+                "region_code": "UA-OD",
+                "state_code": "UA-51"
+            },
+            "country": "Ukraine",
+            "city": "Odessa"
+        }
+
+    },
+
+    {
+        "expected": true,
+        "schema": "../../dist/schema/objects/geo-location-metadata.schema.json",
+        "data":
+        {
+            "country": "unknown",
+            "city": "unknown"
+        }
+
+    }
+
+
+
+
+
+
+
+]

@@ -1,0 +1,9 @@
+
+title: Label "Pathological findings"
+description: Label "Pathological findings"
+subschema: ./schema/labels/pathological-findings.schema.json      
+type: array
+items:
+  $ref: "../values/pathological-findings"
+minItems: 0
+uniqueItems: true

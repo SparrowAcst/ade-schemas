@@ -1,0 +1,16 @@
+{
+ "oneOf": [
+  {
+   "type": "string",
+   "const": "Certain"
+  },
+  {
+   "type": "string",
+   "const": "Probable"
+  },
+  {
+   "type": "string",
+   "const": "No"
+  }
+ ]
+}

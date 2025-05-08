@@ -1,0 +1,20 @@
+
+title: Label "geoLocation"
+description: Label "geoLocation"
+subschema: ./schema/labels/geo-location.schema.json      
+type: object
+properties:
+  "metadata":
+    oneOf:
+      - type: "null"
+      - $ref: "../objects/geo-location-metadata"
+  "country":
+    title: country
+    description: Decoded country name
+    type: string
+    
+  "city":
+    title: city
+    description: Decoded city name
+    type: string
+    
